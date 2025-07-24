@@ -2,7 +2,7 @@ This repository contains programming optimization and performance tricks.
 
 It demonstrates the following approaches implementing in Golang.
 
-1. Cache-Aware Programming:
+## 1. Cache-Aware Programming:
 
 Trick: Design data structures and access patterns to maximize cache hits and minimize cache misses. This often means processing data linearly (sequential access) rather than jumping around in memory.
 
@@ -10,7 +10,7 @@ Expert Insight: Understand CPU cache lines (e.g., 64 bytes) and align data struc
 
 Impact: Can yield 10x-100x speedups for memory-bound applications.
 
-2. Branch Prediction Optimization:
+## 2. Branch Prediction Optimization:
 
 Trick: Structure your code to minimize unpredictable branches (e.g., if/else statements where the condition is random).
 
@@ -18,7 +18,7 @@ Expert Insight: Order conditions so the most likely case is the first if, or use
 
 Impact: Significant for CPU-bound applications with many conditional operations, as mispredicted branches incur a pipeline stall penalty.
 
-3. Data-Oriented Design (DOD):
+## 3. Data-Oriented Design (DOD):
 
 Trick: Organize data around how it will be processed, rather than purely by object relationships. Separate data that changes frequently from data that changes rarely.
 
@@ -26,7 +26,7 @@ Expert Insight: Instead of classic OOP with many small objects and pointers, gro
 
 Impact: Revolutionary for high-performance computing, especially in game development and simulations, where processing large amounts of similar data is common.
 
-4. Profile-Guided Optimization (PGO):
+## 4. Profile-Guided Optimization (PGO):
 
 Trick: Use a profiler to identify performance bottlenecks and guide your optimization efforts.
 

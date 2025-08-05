@@ -75,22 +75,3 @@ func SumValuesOptimizedData(data []OptimizedData) float64 {
 	}
 	return sum
 }
-
-/*
-To run benchmarks:
-go test -bench=. -benchmem .
-*/
-
-/*
-Example output (actual numbers vary):
-goos: linux
-goarch: amd64
-pkg: cache_aware_example
-cpu: AMD Ryzen 7 5800X
-BenchmarkMixedDataAccess-16      1632            740263 ns/op          800008 B/op          1 allocs/op
-BenchmarkOptimizedDataAccess-16  2010            556350 ns/op          800008 B/op          1 allocs/op
-
-Observation: OptimizedDataAccess is faster due to better cache utilization.
-The memory footprint (800008 B/op) is the same because the total size of the structs is identical,
-but how their fields are laid out affects access speed.
-*/
